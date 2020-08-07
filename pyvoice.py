@@ -71,7 +71,7 @@ def current_date():
 
 
 def current_weather(query: str):
-    api_key = '21c6aeaa3df35ea4e399e6e5470dd077'
+    api_key = os.getenv('your api key')
     url = f"https://api.openweathermap.org/data/2.5/weather?q={query}&appid={api_key}&units=metric"
     response = requests.get(url)
     if response.status_code == 200:
